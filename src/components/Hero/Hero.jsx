@@ -4,10 +4,12 @@ import { FaReact } from "react-icons/fa";
 import { SiRedux, SiJavascript, SiMongodb, SiPostgresql } from "react-icons/si";
 
 import { TbDatabase, TbApi, TbCode } from "react-icons/tb";
+import Particles from "../Particles/Particles";
 
 function Hero() {
   return (
     <section className="hero" id="hero" reveal-stagger>
+      <Particles />
       <div className="container">
         <div className="hero__wrapper">
           {/* LEFT */}
