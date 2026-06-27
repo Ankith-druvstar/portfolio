@@ -1,89 +1,38 @@
-# Ankith Ranuva Portfolio
+# Ankith Ranuva | Frontend Engineer Portfolio
 
-A modern, story-driven portfolio website showcasing my journey as a Frontend Engineer specializing in enterprise software, analytics platforms, scalable web applications, and modern web technologies.
+A modern, responsive, and interactive portfolio website built to showcase my experience as a Frontend Engineer specializing in enterprise applications, analytics platforms, and scalable user experiences.
 
-## About
+## 🚀 Live Website
 
-This portfolio is designed to present not only my technical skills but also my professional journey, achievements, and experience building enterprise-grade software solutions.
+Coming Soon
 
-The website follows a narrative approach, taking visitors through:
+## ✨ Features
 
-* Introduction
-* Professional Journey
-* Enterprise Experience
-* Featured Projects
-* Technical Skills
-* Contact Information
+* Responsive design for desktop, tablet, and mobile
+* Dark and light theme support
+* Animated page loader
+* Smooth scrolling single-page experience
+* Active navigation tracking
+* Scroll progress indicator
+* Reveal and stagger animations
+* Interactive project spotlight effects
+* Magnetic hover interactions
+* Hero particle animations
+* Ambient background effects
+* Premium glassmorphism UI
+* Contact and footer integration
+* Resume download support
 
----
-
-## Built With
-
-* React.js
-* Vite
-* JavaScript
-* SCSS
-* React Icons
-* Lucide React
-
----
-
-## Features
-
-* Modern UI/UX Design
-* Dark / Light Theme
-* Story-Driven Portfolio Layout
-* Professional Experience Timeline
-* Enterprise Project Showcase
-* Interactive Skills Section
-* Responsive Design
-* Smooth Navigation
-* Animated Components
-* Downloadable Resume
-
----
-
-## Professional Experience Highlighted
-
-### ASI Cyber Security
-
-* Frontend SPOC for DruvStar Data Vision Platform
-* Enterprise analytics dashboards
-* Global login activity visualization
-* Production feature delivery
-* Frontend architecture and optimization
-
-### Innominds
-
-* Druv Data Vision Platform
-* BrightAuthor UI
-* Messenger Web Application
-* Cybersecurity Research Projects
-
----
-
-## Featured Projects
-
-* DruvStar Data Vision Platform
-* BrightAuthor UI
-* Messenger Web Application
-* Cybersecurity Research
-
----
-
-## Technologies
+## 🛠 Technologies
 
 ### Frontend
 
 * React.js
+* JavaScript
+* SCSS
 * Redux
 * Redux Saga
-* JavaScript
 * TypeScript
-* HTML5
-* CSS3
-* SCSS
-* Material UI
 
 ### Backend & Database
 
@@ -91,88 +40,55 @@ The website follows a narrative approach, taking visitors through:
 * Express.js
 * Python
 * Django
+* PostgreSQL
 * MongoDB
 * MySQL
-* PostgreSQL
 
-### Analytics
+### Enterprise & Analytics
 
 * CubeJS
 * REST APIs
 * Data Visualization
-* Dashboard Development
+* Analytics Dashboards
 
-### Engineering
+## 💼 Featured Projects
 
-* Git
-* Jest
-* Agile
-* Performance Optimization
-* Code Reviews
+### DruvStar Data Vision Platform
 
-### Security & Research
+Enterprise analytics platform featuring:
 
-* Machine Learning
-* Cyber Security
-* Random Forest
-* Extreme Learning Machine (ELM)
-* CSRF Analysis
+* Interactive dashboards
+* Data visualization systems
+* Global login activity monitoring
+* Enterprise reporting tools
 
----
+### BrightAuthor UI
 
-## Getting Started
+* Enterprise frontend engineering
+* Production feature development
+* Automated testing
+* Performance optimization
 
-Clone the repository:
+### Messenger Web Application
 
-```bash
-git clone https://github.com/YOUR_USERNAME/portfolio.git
-```
+* Real-time messaging
+* Authentication
+* Responsive UI
+* State management
 
-Install dependencies:
+### Cybersecurity Research
 
-```bash
-npm install
-```
+* Phishing detection
+* CSRF analysis
+* Machine learning research
+* Django implementations
 
-Start development server:
+## 📬 Contact
 
-```bash
-npm run dev
-```
-
-Build for production:
-
-```bash
-npm run build
-```
-
-Preview production build:
-
-```bash
-npm run preview
-```
+* Email: [ankithrao0005@gmail.com](mailto:ankithrao0005@gmail.com)
+* LinkedIn: linkedin.com/in/ankith-ranuva-b790a7205
+* GitHub: github.com/Ankith-druvstar
 
 ---
 
-## Project Structure
-
-```text
-src/
-├── components/
-├── assets/
-├── styles/
-├── App.jsx
-└── main.jsx
-```
-
----
-
-## Author
-
-**Ankith Ranuva**
-
-Frontend Engineer focused on building scalable enterprise applications, analytics platforms, and exceptional user experiences.
-
----
-
-Built with ❤️ using React and Vite.
+Built with ❤️ using React + SCSS
