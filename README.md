@@ -1,16 +1,178 @@
-# React + Vite
+# Ankith Ranuva Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, story-driven portfolio website showcasing my journey as a Frontend Engineer specializing in enterprise software, analytics platforms, scalable web applications, and modern web technologies.
 
-Currently, two official plugins are available:
+## About
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This portfolio is designed to present not only my technical skills but also my professional journey, achievements, and experience building enterprise-grade software solutions.
 
-## React Compiler
+The website follows a narrative approach, taking visitors through:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Introduction
+* Professional Journey
+* Enterprise Experience
+* Featured Projects
+* Technical Skills
+* Contact Information
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Built With
+
+* React.js
+* Vite
+* JavaScript
+* SCSS
+* React Icons
+* Lucide React
+
+---
+
+## Features
+
+* Modern UI/UX Design
+* Dark / Light Theme
+* Story-Driven Portfolio Layout
+* Professional Experience Timeline
+* Enterprise Project Showcase
+* Interactive Skills Section
+* Responsive Design
+* Smooth Navigation
+* Animated Components
+* Downloadable Resume
+
+---
+
+## Professional Experience Highlighted
+
+### ASI Cyber Security
+
+* Frontend SPOC for DruvStar Data Vision Platform
+* Enterprise analytics dashboards
+* Global login activity visualization
+* Production feature delivery
+* Frontend architecture and optimization
+
+### Innominds
+
+* Druv Data Vision Platform
+* BrightAuthor UI
+* Messenger Web Application
+* Cybersecurity Research Projects
+
+---
+
+## Featured Projects
+
+* DruvStar Data Vision Platform
+* BrightAuthor UI
+* Messenger Web Application
+* Cybersecurity Research
+
+---
+
+## Technologies
+
+### Frontend
+
+* React.js
+* Redux
+* Redux Saga
+* JavaScript
+* TypeScript
+* HTML5
+* CSS3
+* SCSS
+* Material UI
+
+### Backend & Database
+
+* Node.js
+* Express.js
+* Python
+* Django
+* MongoDB
+* MySQL
+* PostgreSQL
+
+### Analytics
+
+* CubeJS
+* REST APIs
+* Data Visualization
+* Dashboard Development
+
+### Engineering
+
+* Git
+* Jest
+* Agile
+* Performance Optimization
+* Code Reviews
+
+### Security & Research
+
+* Machine Learning
+* Cyber Security
+* Random Forest
+* Extreme Learning Machine (ELM)
+* CSRF Analysis
+
+---
+
+## Getting Started
+
+Clone the repository:
+
+```bash
+git clone https://github.com/YOUR_USERNAME/portfolio.git
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start development server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview production build:
+
+```bash
+npm run preview
+```
+
+---
+
+## Project Structure
+
+```text
+src/
+├── components/
+├── assets/
+├── styles/
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## Author
+
+**Ankith Ranuva**
+
+Frontend Engineer focused on building scalable enterprise applications, analytics platforms, and exceptional user experiences.
+
+---
+
+Built with ❤️ using React and Vite.
