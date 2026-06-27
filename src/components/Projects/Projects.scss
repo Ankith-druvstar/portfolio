@@ -83,11 +83,28 @@
 
     font-weight: 800;
 
-    color: var(--accent-primary);
+    color:
+        transparent;
 
-    opacity: .08;
+    -webkit-text-stroke:
+        1px rgba(59,130,246,.15);
+
+    transition:
+        all .3s ease;
 
     pointer-events: none;
+}
+
+.project:hover .project__number {
+
+    color:
+        rgba(59,130,246,.15);
+
+    -webkit-text-stroke:
+        1px rgba(59,130,246,.45);
+
+    transform:
+        scale(1.08);
 }
 
 /* ====================================== */

@@ -2,3 +2,104 @@ section {
     min-height: 100vh;
     padding: 100px 0;
 }
+
+/* ================================= */
+/* AMBIENT BLOBS */
+/* ================================= */
+
+.ambient {
+
+    position: fixed;
+
+    border-radius: 50%;
+
+    filter: blur(140px);
+
+    pointer-events: none;
+
+    z-index: -1;
+
+    opacity: .18;
+
+    animation:
+        ambientFloat 20s ease-in-out infinite;
+}
+
+/* TOP RIGHT */
+
+.ambient-1 {
+
+    width: 420px;
+    height: 420px;
+
+    top: -150px;
+    right: -100px;
+
+    background:
+        var(--accent-primary);
+}
+
+/* MIDDLE LEFT */
+
+.ambient-2 {
+
+    width: 350px;
+    height: 350px;
+
+    top: 40%;
+
+    left: -150px;
+
+    background:
+        var(--accent-secondary);
+
+    animation-delay: -6s;
+}
+
+/* BOTTOM */
+
+.ambient-3 {
+
+    width: 450px;
+    height: 450px;
+
+    bottom: -200px;
+
+    right: 15%;
+
+    background:
+        var(--accent-primary);
+
+    animation-delay: -12s;
+}
+
+/* ================================= */
+
+@keyframes ambientFloat {
+
+    0% {
+
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    50% {
+
+        transform:
+            translate(40px,-40px)
+            scale(1.15);
+    }
+
+    100% {
+
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+}
+
+[data-theme="light"] .ambient {
+
+    display: none;
+}

@@ -1,44 +1,66 @@
+import { useState, useEffect } from "react";
+
 import "./Home.scss";
 
-import Hero from '../../components/Hero/Hero';
+import Loader from "../../components/Loader/Loader";
 
 import Navbar from "../../components/Navbar/Navbar";
+import Hero from "../../components/Hero/Hero";
 import About from "../../components/About/About";
 import Experience from "../../components/Experience/Experience";
-import Projects from "../../components/Projects/Projects";
 import Skills from "../../components/Skills/Skills";
+import Projects from "../../components/Projects/Projects";
 import Contact from "../../components/Contacts/Contacts";
+import useReveal from "../../hooks/useReveal";
 
 function Home() {
-    return (
-        <>
-            <Navbar />
+  const [loading, setLoading] = useState(true);
+  useReveal(!loading);
 
-            <section id="hero">
-                <Hero/>
-            </section>
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1200);
 
-            <section id="about">
-                <About/>
-            </section>
+    return () => clearTimeout(timer);
+  }, []);
 
-            <section id="experience">
-                <Experience/>
-            </section>
+  if (loading) {
+    return <Loader />;
+  }
 
-            <section id="skills">
-                <Skills/>
-            </section>
+  return (
+    <>
+      <div className="ambient ambient-1" />
+      <div className="ambient ambient-2" />
+      <div className="ambient ambient-3" />
+      <Navbar />
 
-            <section id="projects">
-                <Projects/>
-            </section>
+      <section id="hero">
+        <Hero />
+      </section>
 
-            <section id="contact">
-                <Contact/>
-            </section>
-        </>
-    );
+      <section id="about">
+        <About />
+      </section>
+
+      <section id="experience">
+        <Experience />
+      </section>
+
+      <section id="skills">
+        <Skills />
+      </section>
+
+      <section id="projects">
+        <Projects />
+      </section>
+
+      <section id="contact">
+        <Contact />
+      </section>
+    </>
+  );
 }
 
 export default Home;

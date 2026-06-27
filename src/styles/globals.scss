@@ -202,14 +202,22 @@ img {
 }
 
 
-.hero,
-.about,
-.experience,
-.skills,
-.projects,
-.contact {
+// .hero,
+// .about,
+// .experience,
+// .skills,
+// .projects,
+// .contact {
+
+//     position: relative;
+
+//     z-index: 1;
+// }
+
+html,
+body {
 
     position: relative;
 
-    z-index: 1;
+    overflow-x: hidden;
 }

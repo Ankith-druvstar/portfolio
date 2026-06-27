@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 
-export default function useReveal() {
+export default function useReveal(trigger = true) {
 
   useEffect(() => {
+
+    if (!trigger) return;
 
     const elements =
       document.querySelectorAll(
@@ -40,20 +42,19 @@ export default function useReveal() {
         },
 
         {
-          threshold: 0.15,
-
+          threshold: .15,
           rootMargin:
             "0px 0px -100px 0px",
         }
       );
 
     elements.forEach(
-      (el) =>
+      el =>
         observer.observe(el)
     );
 
     return () =>
       observer.disconnect();
 
-  }, []);
+  }, [trigger]);
 }
