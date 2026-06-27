@@ -50,3 +50,18 @@ img {
 
     margin: auto;
 }
+
+:root {
+
+    --section-space: 0px;
+}
+
+.experience,
+.projects,
+.skills,
+.contact {
+
+    padding:
+        var(--section-space)
+        0;
+}

@@ -41,9 +41,17 @@ function Hero() {
           </div>
 
           <div className="hero__actions">
-            <button className="primary-btn">Explore My Work →</button>
+            <a href="#projects" className="primary-btn">
+              View Projects →
+            </a>
 
-            <button className="secondary-btn">Let's Connect</button>
+            <a
+              href="/Ankith_Ranuva_Resume.pdf"
+              download
+              className="secondary-btn"
+            >
+              ↓ Download Resume
+            </a>
           </div>
         </div>
       </div>
