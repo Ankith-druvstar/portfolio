@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import "./ProgressBar.scss";
+import "./progressBar.scss";
 
 function ProgressBar() {
 
