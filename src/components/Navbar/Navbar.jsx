@@ -5,17 +5,14 @@ import { HiOutlineMenuAlt3, HiX } from "react-icons/hi";
 import "./Navbar.scss";
 
 function Navbar() {
-
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem("theme") || "dark";
   });
 
   const [active, setActive] = useState("hero");
-
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-
     document.documentElement.setAttribute(
       "data-theme",
       theme
@@ -25,11 +22,9 @@ function Navbar() {
       "theme",
       theme
     );
-
   }, [theme]);
 
   const toggleTheme = () => {
-
     setTheme(
       theme === "dark"
         ? "light"
@@ -37,8 +32,21 @@ function Navbar() {
     );
   };
 
-  useEffect(() => {
+  const scrollToSection = (id) => {
+    const section =
+      document.getElementById(id);
 
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+
+      setMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
     const sections =
       document.querySelectorAll(
         "section"
@@ -46,16 +54,12 @@ function Navbar() {
 
     const observer =
       new IntersectionObserver(
-
         (entries) => {
-
           entries.forEach(
             (entry) => {
-
               if (
                 entry.isIntersecting
               ) {
-
                 setActive(
                   entry.target.id
                 );
@@ -63,14 +67,13 @@ function Navbar() {
             }
           );
         },
-
         {
-          threshold: .2,
+          threshold: 0.3,
         }
       );
 
     sections.forEach(
-      section =>
+      (section) =>
         observer.observe(
           section
         )
@@ -78,17 +81,23 @@ function Navbar() {
 
     return () =>
       observer.disconnect();
-
   }, []);
 
   return (
     <>
       <nav className="navbar">
-
         <div className="navbar__container">
 
-          <div className="navbar__brand">
+          {/* Logo */}
 
+          <div
+            className="navbar__brand"
+            onClick={() =>
+              scrollToSection(
+                "hero"
+              )
+            }
+          >
             <div className="navbar__logo">
               A R
             </div>
@@ -96,14 +105,19 @@ function Navbar() {
             <span className="navbar__fullname">
               Ankith Ranuva
             </span>
-
           </div>
+
+          {/* Desktop */}
 
           <ul className="navbar__menu">
 
             <li>
               <a
-                href="#about"
+                onClick={() =>
+                  scrollToSection(
+                    "about"
+                  )
+                }
                 className={
                   active === "about"
                     ? "active"
@@ -116,9 +130,14 @@ function Navbar() {
 
             <li>
               <a
-                href="#experience"
+                onClick={() =>
+                  scrollToSection(
+                    "experience"
+                  )
+                }
                 className={
-                  active === "experience"
+                  active ===
+                  "experience"
                     ? "active"
                     : ""
                 }
@@ -129,9 +148,14 @@ function Navbar() {
 
             <li>
               <a
-                href="#skills"
+                onClick={() =>
+                  scrollToSection(
+                    "skills"
+                  )
+                }
                 className={
-                  active === "skills"
+                  active ===
+                  "skills"
                     ? "active"
                     : ""
                 }
@@ -142,9 +166,14 @@ function Navbar() {
 
             <li>
               <a
-                href="#projects"
+                onClick={() =>
+                  scrollToSection(
+                    "projects"
+                  )
+                }
                 className={
-                  active === "projects"
+                  active ===
+                  "projects"
                     ? "active"
                     : ""
                 }
@@ -155,9 +184,14 @@ function Navbar() {
 
             <li>
               <a
-                href="#contact"
+                onClick={() =>
+                  scrollToSection(
+                    "contact"
+                  )
+                }
                 className={
-                  active === "contact"
+                  active ===
+                  "contact"
                     ? "active"
                     : ""
                 }
@@ -168,11 +202,12 @@ function Navbar() {
 
           </ul>
 
+          {/* Theme */}
+
           <button
             className="theme-btn"
             onClick={toggleTheme}
           >
-
             {
               theme === "dark"
                 ? <Sun size={18}/>
@@ -186,8 +221,9 @@ function Navbar() {
                   : "Turn on dark mode"
               }
             </span>
-
           </button>
+
+          {/* Mobile */}
 
           <button
             className="mobile-btn"
@@ -205,59 +241,63 @@ function Navbar() {
           </button>
 
         </div>
-
       </nav>
 
+      {/* Mobile Menu */}
+
       <div
-        className={
-          `mobile-menu ${
-            menuOpen
-              ? "open"
-              : ""
-          }`
-        }
+        className={`mobile-menu ${
+          menuOpen
+            ? "open"
+            : ""
+        }`}
       >
 
         <a
-          href="#about"
           onClick={() =>
-            setMenuOpen(false)
+            scrollToSection(
+              "about"
+            )
           }
         >
           About
         </a>
 
         <a
-          href="#experience"
           onClick={() =>
-            setMenuOpen(false)
+            scrollToSection(
+              "experience"
+            )
           }
         >
           Experience
         </a>
 
         <a
-          href="#skills"
           onClick={() =>
-            setMenuOpen(false)
+            scrollToSection(
+              "skills"
+            )
           }
         >
           Skills
         </a>
 
         <a
-          href="#projects"
           onClick={() =>
-            setMenuOpen(false)
+            scrollToSection(
+              "projects"
+            )
           }
         >
           Projects
         </a>
 
         <a
-          href="#contact"
           onClick={() =>
-            setMenuOpen(false)
+            scrollToSection(
+              "contact"
+            )
           }
         >
           Contact

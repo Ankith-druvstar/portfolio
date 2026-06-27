@@ -662,3 +662,10 @@
         display: none;
     }
 }
+.navbar__menu a,
+.mobile-menu a {
+
+    cursor: pointer;
+
+    user-select: none;
+}
