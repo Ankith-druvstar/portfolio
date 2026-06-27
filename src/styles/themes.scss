@@ -1,0 +1,116 @@
+/* =========================================
+   DARK THEME
+========================================= */
+
+:root[data-theme='dark'] {
+
+    /* Backgrounds */
+    --bg-primary: #050505;
+    --bg-secondary: #0d0d0d;
+    --bg-card: rgba(255,255,255,.03);
+
+    /* Text */
+    --text-primary: #ffffff;
+    --text-secondary: #9ca3af;
+
+    /* Accent */
+    --accent-primary: #3b82f6;
+    --accent-secondary: #60a5fa;
+
+    /* Borders */
+    --border-color: rgba(255,255,255,.08);
+
+    /* Shadows */
+    --shadow:
+        0 10px 40px rgba(0,0,0,.35);
+
+    /* Glass */
+    --glass:
+        rgba(10,10,10,.65);
+
+    /* Hero */
+    --hero-glow:
+        rgba(59,130,246,.12);
+
+    /* Hover */
+    --hover-bg:
+        rgba(255,255,255,.06);
+
+    /* Cards */
+    --card-hover:
+        rgba(255,255,255,.05);
+
+    /* Navbar */
+    --navbar-bg:
+        rgba(10,10,10,.65);
+
+    /* Selection */
+    --selection-bg:
+        rgba(59,130,246,.3);
+}
+
+
+/* =========================================
+   LIGHT THEME
+========================================= */
+
+:root[data-theme='light'] {
+
+    /* Backgrounds */
+    --bg-primary: #fafafa;
+    --bg-secondary: #ffffff;
+    --bg-card: rgba(0,0,0,.03);
+
+    /* Text */
+    --text-primary: #111111;
+    --text-secondary: #525252;
+
+    /* Accent */
+    --accent-primary: #2563eb;
+    --accent-secondary: #3b82f6;
+
+    /* Borders */
+    --border-color: rgba(0,0,0,.08);
+
+    /* Shadows */
+    --shadow:
+        0 10px 30px rgba(0,0,0,.08);
+
+    /* Glass */
+    --glass:
+        rgba(255,255,255,.65);
+
+    /* Hero */
+    --hero-glow:
+        rgba(37,99,235,.08);
+
+    /* Hover */
+    --hover-bg:
+        rgba(0,0,0,.05);
+
+    /* Cards */
+    --card-hover:
+        rgba(0,0,0,.04);
+
+    /* Navbar */
+    --navbar-bg:
+        rgba(255,255,255,.65);
+
+    /* Selection */
+    --selection-bg:
+        rgba(37,99,235,.2);
+}
+
+
+/* =========================================
+   GLOBAL SELECTION
+========================================= */
+
+::selection {
+
+    background:
+        var(--selection-bg);
+
+    color:
+        var(--text-primary);
+}

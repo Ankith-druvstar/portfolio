@@ -1,0 +1,52 @@
+@use './themes';
+@use './typography';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 140px;
+}
+
+body {
+    background: var(--bg-primary);
+
+    color: var(--text-primary);
+
+    font-family:
+        Inter,
+        system-ui,
+        sans-serif;
+
+    transition:
+        all .4s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(
+        var(--container),
+        calc(100% - 40px)
+    );
+
+    margin: auto;
+}

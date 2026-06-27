@@ -1,0 +1,172 @@
+.experience {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 120px 0;
+}
+
+.experience__content {
+
+    max-width: 760px;
+}
+
+.experience__description {
+
+    color:
+        var(--text-secondary);
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    margin:
+        50px 0
+        100px;
+}
+
+.experience__timeline {
+
+    position: relative;
+}
+
+.experience__timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 90px;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 1px;
+
+    background:
+        var(--border-color);
+}
+
+.experience__item {
+
+    display: flex;
+
+    gap: 60px;
+
+    margin-bottom: 100px;
+
+    position: relative;
+}
+
+.experience__year {
+
+    min-width: 90px;
+
+    color:
+        var(--accent-primary);
+
+    font-weight: 700;
+
+    font-size: 20px;
+
+    position: relative;
+}
+
+.experience__year::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: -35px;
+
+    top: 10px;
+
+    width: 14px;
+
+    height: 14px;
+
+    border-radius: 50%;
+
+    background:
+        var(--accent-primary);
+
+    box-shadow:
+        0 0 20px
+        var(--accent-primary);
+}
+
+.experience__company {
+
+    color:
+        var(--accent-primary);
+
+    font-size: 15px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+.experience__details h3 {
+
+    font-size: 30px;
+
+    margin:
+        10px 0
+        25px;
+}
+
+.experience__details ul {
+
+    padding-left: 20px;
+
+    margin-bottom: 30px;
+}
+
+.experience__details li {
+
+    color:
+        var(--text-secondary);
+
+    margin-bottom: 12px;
+
+    line-height: 1.7;
+}
+
+.experience__stack {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.experience__stack span {
+
+    padding:
+        8px 16px;
+
+    border-radius: 999px;
+
+    background:
+        var(--bg-card);
+
+    border:
+        1px solid
+        var(--border-color);
+
+    transition:
+        transform .2s ease;
+}
+
+.experience__stack span:hover {
+
+    transform:
+        translateY(-2px);
+}
