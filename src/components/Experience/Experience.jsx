@@ -2,7 +2,7 @@ import "./Experience.scss";
 
 function Experience() {
   return (
-    <section className="experience" id="experience">
+    <section className="experience reveal-left" id="experience">
 
       <div className="container">
 
@@ -26,7 +26,7 @@ function Experience() {
             experience.
           </p>
 
-          <div className="experience__timeline">
+          <div className="experience__timeline reveal-stagger">
 
             {/* ASI */}
 

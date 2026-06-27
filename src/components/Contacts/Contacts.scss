@@ -64,8 +64,7 @@
     background: var(--bg-card);
 
     border:
-        1px solid
-        var(--border-color);
+        1px solid var(--border-color);
 
     transition:
         transform .25s ease,
@@ -86,7 +85,7 @@
         var(--hover-bg);
 
     box-shadow:
-        0 15px 40px rgba(0,0,0,.12);
+        0 15px 40px rgba(0, 0, 0, .12);
 }
 
 /* ====================================== */
@@ -111,8 +110,7 @@
         var(--bg-primary);
 
     border:
-        1px solid
-        var(--border-color);
+        1px solid var(--border-color);
 
     color:
         var(--accent-primary);
@@ -123,8 +121,7 @@
         transform .25s ease;
 }
 
-.contact__card:hover
-.contact__icon {
+.contact__card:hover .contact__icon {
 
     transform:
         scale(1.08);
@@ -240,5 +237,314 @@
     .contact__card p {
 
         font-size: 14px;
+    }
+}
+
+/* ====================================== */
+/* FOOTER */
+/* ====================================== */
+
+.contact__footer {
+
+    margin-top: 100px;
+
+    padding-top: 60px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    text-align: center;
+
+    gap: 24px;
+
+    position: relative;
+}
+
+.contact__footerLine {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--border-color),
+            transparent
+        );
+
+    margin-bottom: 20px;
+}
+
+.contact__footer h3 {
+
+    font-size: 30px;
+
+    letter-spacing: 4px;
+
+    color:
+        var(--text-primary);
+}
+
+.contact__footer p {
+
+    color:
+        var(--text-secondary);
+
+    font-size: 16px;
+}
+
+.contact__footer span {
+
+    max-width: 500px;
+
+    color:
+        var(--text-secondary);
+
+    line-height: 1.8;
+
+    font-size: 18px;
+}
+
+/* ====================================== */
+/* BACK TO TOP */
+/* ====================================== */
+
+.back-top {
+
+    position: relative;
+
+    width: 56px;
+    height: 56px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 20px;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--accent-primary),
+            var(--accent-secondary)
+        );
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.back-top:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(59,130,246,.25);
+}
+
+/* ====================================== */
+/* GLASS TOOLTIP */
+/* ====================================== */
+
+.back-top-tooltip {
+
+    position: absolute;
+
+    bottom: calc(100% + 16px);
+
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        translateY(10px);
+
+    padding:
+        10px 16px;
+
+    border-radius: 14px;
+
+    white-space: nowrap;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    color:
+        var(--text-primary);
+
+    background:
+        rgba(20,20,20,.55);
+
+    backdrop-filter:
+        blur(30px);
+
+    -webkit-backdrop-filter:
+        blur(30px);
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.20);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease,
+        visibility .25s ease;
+
+    z-index: 9999;
+}
+
+.back-top-tooltip::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%)
+        rotate(45deg);
+
+    width: 10px;
+
+    height: 10px;
+
+    background:
+        rgba(20,20,20,.55);
+
+    backdrop-filter:
+        blur(30px);
+
+    -webkit-backdrop-filter:
+        blur(30px);
+
+    border-right:
+        1px solid
+        rgba(255,255,255,.15);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.15);
+}
+
+.back-top:hover
+.back-top-tooltip {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(-50%)
+        translateY(0);
+}
+
+/* ====================================== */
+/* FOOTER TEXT */
+/* ====================================== */
+
+.contact__footer small {
+
+    color:
+        var(--text-secondary);
+
+    font-size: 14px;
+}
+
+/* ====================================== */
+/* LIGHT MODE */
+/* ====================================== */
+
+[data-theme="light"] .back-top-tooltip {
+
+    background:
+        rgba(255,255,255,.85);
+
+    color:
+        #111;
+
+    border:
+        1px solid
+        rgba(0,0,0,.08);
+}
+
+[data-theme="light"] .back-top-tooltip::after {
+
+    background:
+        rgba(255,255,255,.85);
+
+    border-right:
+        1px solid
+        rgba(0,0,0,.08);
+
+    border-bottom:
+        1px solid
+        rgba(0,0,0,.08);
+}
+
+/* ====================================== */
+/* MOBILE */
+/* ====================================== */
+
+@media (max-width:768px) {
+
+    .contact__footer {
+
+        margin-top: 70px;
+
+        gap: 18px;
+    }
+
+    .contact__footer h3 {
+
+        font-size: 22px;
+
+        letter-spacing: 2px;
+    }
+
+    .contact__footer span {
+
+        font-size: 16px;
+    }
+
+    .back-top {
+
+        width: 56px;
+        height: 56px;
+    }
+
+    .back-top-tooltip {
+
+        display: none;
     }
 }

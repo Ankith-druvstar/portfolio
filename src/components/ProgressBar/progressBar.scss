@@ -1,0 +1,60 @@
+.progress-bar {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+
+    height: 3px;
+
+    z-index: 9999;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--accent-primary),
+            var(--accent-secondary)
+        );
+
+    box-shadow:
+        0 0 12px
+        var(--accent-primary),
+        0 0 24px
+        rgba(59,130,246,.35);
+
+    transform-origin:
+        left center;
+
+    will-change:
+        width;
+}
+
+/* subtle glow in dark mode */
+
+[data-theme="dark"] .progress-bar {
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            var(--accent-primary)
+        );
+}
+
+/* keep it clean in light mode */
+
+[data-theme="light"] .progress-bar {
+
+    box-shadow: none;
+}
+
+/* mobile */
+
+@media (max-width:768px) {
+
+    .progress-bar {
+
+        height: 2px;
+    }
+}

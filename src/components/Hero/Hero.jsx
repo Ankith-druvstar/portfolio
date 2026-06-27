@@ -7,7 +7,7 @@ import { TbDatabase, TbApi, TbCode } from "react-icons/tb";
 
 function Hero() {
   return (
-    <section className="hero" id="hero">
+    <section className="hero" id="hero" reveal-stagger>
       <div className="container">
         <div className="hero__wrapper">
           {/* LEFT */}

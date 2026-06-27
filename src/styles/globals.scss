@@ -135,3 +135,81 @@ img {
 .experience__content {
     max-width: 1700px;
 }
+
+/* ================================= */
+/* REVEAL */
+/* ================================= */
+
+.reveal {
+
+    opacity: 0;
+
+    transform:
+        translateY(40px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.reveal-left {
+
+    opacity: 0;
+
+    transform:
+        translateX(-50px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.reveal-right {
+
+    opacity: 0;
+
+    transform:
+        translateX(50px);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+.reveal-scale {
+
+    opacity: 0;
+
+    transform:
+        scale(.92);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+}
+
+/* ================================= */
+/* ACTIVE */
+/* ================================= */
+
+.reveal--active {
+
+    opacity: 1;
+
+    transform:
+        translate(0)
+        scale(1);
+}
+
+
+.hero,
+.about,
+.experience,
+.skills,
+.projects,
+.contact {
+
+    position: relative;
+
+    z-index: 1;
+}

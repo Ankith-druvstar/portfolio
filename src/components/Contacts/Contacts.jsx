@@ -1,15 +1,10 @@
-import {
-  FaGithub,
-  FaLinkedin,
-  FaEnvelope,
-  FaFileAlt,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope, FaFileAlt } from "react-icons/fa";
 
 import "./Contacts.scss";
 
 function Contact() {
   return (
-    <section className="contact" id="contact">
+    <section className="contact reveal" id="contact">
       <div className="container">
         <div className="contact__content">
           <span className="section-tag">Contact</span>
@@ -22,7 +17,7 @@ function Contact() {
             meaningful problems and building experiences that make an impact.
           </p>
 
-          <div className="contact__links">
+          <div className="contact__links reveal-stagger">
             <a href="mailto:ankithrao0005@gmail.com" className="contact__card">
               <div className="contact__icon">
                 <FaEnvelope />
@@ -84,6 +79,29 @@ function Contact() {
                 <p>Download CV</p>
               </div>
             </a>
+          </div>
+          <div className="contact__footer">
+            <div className="contact__footerLine"></div>
+
+            <h3>ANKITH RANUVA</h3>
+
+            <p>Frontend Engineer • React • TypeScript • Enterprise Systems</p>
+
+            <span>Building scalable products and meaningful experiences.</span>
+
+            <button
+              className="back-top"
+              onClick={() =>
+                window.scrollTo({
+                  top: 0,
+                  behavior: "smooth",
+                })
+              }
+            >
+              ↑<span className="back-top-tooltip">Back To Top</span>
+            </button>
+
+            <small>© 2026 Ankith Ranuva • Built with React + SCSS</small>
           </div>
         </div>
       </div>

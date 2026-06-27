@@ -12,7 +12,7 @@
 .about__description {
     color: var(--text-secondary);
 
-    font-size: clamp(18px,1.4vw,22px);
+    font-size: clamp(18px, 1.4vw, 22px);
 
     line-height: 1.9;
 
@@ -40,12 +40,10 @@
     width: 1px;
 
     background:
-        linear-gradient(
-            to bottom,
+        linear-gradient(to bottom,
             transparent,
             var(--border-color),
-            transparent
-        );
+            transparent);
 }
 
 .journey__item {
@@ -92,8 +90,7 @@
     background: var(--accent-primary);
 
     box-shadow:
-        0 0 20px
-        var(--accent-primary);
+        0 0 20px var(--accent-primary);
 
     animation:
         pulseDot 3s infinite;
@@ -105,11 +102,9 @@
 
 .journey__content h3 {
     font-size:
-        clamp(
-            24px,
+        clamp(24px,
             2vw,
-            30px
-        );
+            30px);
 
     font-weight: 600;
 
@@ -125,75 +120,154 @@
     max-width: 580px;
 }
 
-/* ========================= */
+/* ====================================== */
 /* ACHIEVEMENTS */
-/* ========================= */
+/* ====================================== */
 
 .about__achievements {
-    display: flex;
 
-    flex-wrap: wrap;
+    display: grid;
 
-    gap: 16px;
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 24px;
 
     margin-top: 80px;
 }
 
-.achievement {
-    padding: 14px 22px;
+.achievement-card {
 
-    border-radius: 999px;
+    padding: 32px;
 
-    background: var(--bg-card);
+    border-radius: 24px;
 
-    border: 1px solid var(--border-color);
+    background:
+        var(--bg-card);
+
+    border:
+        1px solid var(--border-color);
 
     transition:
-        transform .2s ease,
-        background .2s ease;
+        transform .25s ease,
+        border-color .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+
+    position: relative;
+
+    overflow: hidden;
 }
 
-.achievement:hover {
-    transform: translateY(-3px);
+.achievement-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    border-color:
+        var(--accent-primary);
 
     background:
         var(--hover-bg);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, .10);
+}
+
+.achievement-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 3px;
+
+    background:
+        linear-gradient(90deg,
+            var(--accent-primary),
+            var(--accent-secondary));
+
+    transform:
+        scaleX(0);
+
+    transform-origin: left;
+
+    transition:
+        transform .3s ease;
+}
+
+.achievement-card:hover::before {
+
+    transform:
+        scaleX(1);
+}
+
+.achievement-icon {
+
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+.achievement-card h4 {
+
+    font-size: 22px;
+
+    margin-bottom: 14px;
+
+    color:
+        var(--text-primary);
+}
+
+.achievement-card p {
+
+    color:
+        var(--text-secondary);
+
+    line-height: 1.8;
+
+    font-size: 15px;
 }
 
 /* ========================= */
 /* TABLET */
 /* ========================= */
 
-@media (max-width:992px){
+@media (max-width:992px) {
 
-    .about{
-        padding:100px 0;
+    .about {
+        padding: 100px 0;
     }
 
-    .about__content{
-        max-width:100%;
+    .about__content {
+        max-width: 100%;
     }
 
-    .about__description{
-        font-size:18px;
-        line-height:1.8;
+    .about__description {
+        font-size: 18px;
+        line-height: 1.8;
     }
 
-    .journey__item{
-        gap:40px;
+    .journey__item {
+        gap: 40px;
     }
 
-    .about__journey::before{
-        left:65px;
+    .about__journey::before {
+        left: 65px;
     }
 
-    .journey__year{
-        min-width:65px;
-        font-size:20px;
+    .journey__year {
+        min-width: 65px;
+        font-size: 20px;
     }
 
-    .journey__year::after{
-        right:-27px;
+    .journey__year::after {
+        right: -27px;
     }
 }
 
@@ -201,89 +275,88 @@
 /* MOBILE */
 /* ========================= */
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-    .about{
-        padding:80px 0;
+    .about {
+        padding: 80px 0;
     }
 
-    .section-title{
-        font-size:36px;
-        line-height:1.15;
-        margin-bottom:30px;
+    .section-title {
+        font-size: 36px;
+        line-height: 1.15;
+        margin-bottom: 30px;
     }
 
-    .about__description{
-        font-size:15px;
-        line-height:1.9;
-        margin:0 0 50px;
+    .about__description {
+        font-size: 15px;
+        line-height: 1.9;
+        margin: 0 0 50px;
     }
 
     /* convert timeline into cards */
 
-    .about__journey::before{
-        display:none;
+    .about__journey::before {
+        display: none;
     }
 
-    .journey__item{
-        display:block;
+    .journey__item {
+        display: block;
 
-        padding:22px;
+        padding: 22px;
 
-        margin-bottom:20px;
+        margin-bottom: 20px;
 
-        border-radius:20px;
+        border-radius: 20px;
 
         background:
             var(--bg-card);
 
         border:
-            1px solid
-            var(--border-color);
+            1px solid var(--border-color);
     }
 
-    .journey__year{
-        font-size:16px;
+    .journey__year {
+        font-size: 16px;
 
-        margin-bottom:12px;
+        margin-bottom: 12px;
 
-        min-width:auto;
+        min-width: auto;
     }
 
-    .journey__year::after{
-        display:none;
+    .journey__year::after {
+        display: none;
     }
 
-    .journey__content h3{
-        font-size:22px;
+    .journey__content h3 {
+        font-size: 22px;
 
-        margin-bottom:10px;
+        margin-bottom: 10px;
 
-        line-height:1.3;
+        line-height: 1.3;
     }
 
-    .journey__content p{
-        font-size:14px;
+    .journey__content p {
+        font-size: 14px;
 
-        line-height:1.7;
+        line-height: 1.7;
     }
 
-    .about__achievements{
-        display:grid;
+    .about__achievements {
+        display: grid;
 
-        grid-template-columns:1fr;
+        grid-template-columns: 1fr;
 
-        gap:12px;
+        gap: 12px;
 
-        margin-top:40px;
+        margin-top: 40px;
     }
 
-    .achievement{
-        width:100%;
+    .achievement {
+        width: 100%;
 
-        text-align:center;
+        text-align: center;
 
-        border-radius:16px;
+        border-radius: 16px;
     }
 }
 
@@ -291,20 +364,20 @@
 /* ANIMATION */
 /* ========================= */
 
-@keyframes pulseDot{
+@keyframes pulseDot {
 
-    0%{
-        transform:scale(1);
-        opacity:1;
+    0% {
+        transform: scale(1);
+        opacity: 1;
     }
 
-    50%{
-        transform:scale(1.3);
-        opacity:.6;
+    50% {
+        transform: scale(1.3);
+        opacity: .6;
     }
 
-    100%{
-        transform:scale(1);
-        opacity:1;
+    100% {
+        transform: scale(1);
+        opacity: 1;
     }
 }

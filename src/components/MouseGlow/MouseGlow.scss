@@ -1,0 +1,60 @@
+.mouse-glow {
+
+    position: fixed;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+    left: -225px;
+    top: -225px;
+
+    will-change: transform;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(59,130,246,.22) 0%,
+            rgba(59,130,246,.10) 35%,
+            transparent 70%
+        );
+
+    filter:
+        blur(70px);
+
+    transition:
+        opacity .3s ease;
+}
+
+/* LIGHT MODE */
+
+[data-theme="light"] .mouse-glow {
+
+    display: none;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(59,130,246,.32) 0%,
+            rgba(59,130,246,.18) 30%,
+            transparent 70%
+        );
+
+    filter:
+        blur(80px);
+}
+
+/* MOBILE */
+
+@media (max-width:768px) {
+
+    .mouse-glow {
+
+        display: none;
+    }
+}

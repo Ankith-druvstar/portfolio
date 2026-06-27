@@ -121,7 +121,7 @@ const skillGroups = [
 
 function Skills() {
   return (
-    <section className="skills" id="skills">
+    <section className="skills reveal-scale" id="skills">
       <div className="container">
 
         <div className="skills__content">
@@ -153,7 +153,7 @@ function Skills() {
                 {group.title}
               </h3>
 
-              <div className="skill-grid">
+              <div className="skill-grid reveal-stagger">
 
                 {group.skills.map((skill) => (
                   <div

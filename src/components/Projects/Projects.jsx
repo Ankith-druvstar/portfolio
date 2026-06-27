@@ -2,7 +2,7 @@ import "./Projects.scss";
 
 function Projects() {
   return (
-    <section className="projects" id="projects">
+    <section className="projects reveal-right" id="projects">
       <div className="container">
         <div className="projects__content">
           <span className="section-tag">Selected Projects</span>
@@ -21,7 +21,7 @@ function Projects() {
 
           {/* Project 1 */}
 
-          <div className="project">
+          <div className="project reveal-stagger">
             <div className="project__number">01</div>
 
             <div className="project__content">
