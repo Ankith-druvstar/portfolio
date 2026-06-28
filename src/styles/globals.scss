@@ -148,8 +148,8 @@ img {
         translateY(40px);
 
     transition:
-        opacity .7s ease,
-        transform .7s ease;
+        opacity .4s ease,
+        transform .4s ease;
 }
 
 .reveal-left {
@@ -160,8 +160,8 @@ img {
         translateX(-50px);
 
     transition:
-        opacity .7s ease,
-        transform .7s ease;
+        opacity .4s ease,
+        transform .4s ease;
 }
 
 .reveal-right {
@@ -172,8 +172,8 @@ img {
         translateX(50px);
 
     transition:
-        opacity .7s ease,
-        transform .7s ease;
+        opacity .4s ease,
+        transform .4s ease;
 }
 
 .reveal-scale {
@@ -184,8 +184,8 @@ img {
         scale(.92);
 
     transition:
-        opacity .7s ease,
-        transform .7s ease;
+        opacity .4s ease,
+        transform .4s ease;
 }
 
 /* ================================= */
@@ -220,4 +220,15 @@ body {
     position: relative;
 
     overflow-x: hidden;
+}
+.about,
+.experience,
+.skills,
+.projects,
+.contact {
+
+    min-height: auto;
+
+    padding-top: 0;
+    padding-bottom: 50px;
 }

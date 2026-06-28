@@ -42,7 +42,7 @@ export default function useReveal(trigger = true) {
         },
 
         {
-          threshold: .15,
+          threshold: .03,
           rootMargin:
             "0px 0px -100px 0px",
         }
